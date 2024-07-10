@@ -14,4 +14,14 @@ public class UserService {
 		close(conn);
 		return result;
 	}
+	
+//	public User loginUser(String id , String pw) {
+//		Connection conn = getConnection();
+//		User u = new User();
+//		
+//		
+//		User result1 = new UserDao().loginUser(id,pw,conn);
+//		close(conn);
+//		return result1;
+//	}
 }
