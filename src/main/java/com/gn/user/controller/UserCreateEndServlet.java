@@ -37,17 +37,19 @@ public class UserCreateEndServlet extends HttpServlet {
 		
 		int result = new UserService().createUser(u);
 //		JDBCTemplate.getConnection();
-//		RequestDispatcher view 
-//		=request.getRequestDispatcher("/views/user/create_fail/jsp");
-//		if(result > 0) {
-//		view = request.getRequestDispatcher("/views/user/create_success.jsp");
-//		}
-//		view.forward(request, response);
+		RequestDispatcher view 
+		=request.getRequestDispatcher("/views/user/create_fail/jsp");
 		if(result > 0) {
-			System.out.println("성공");
-		}else {
-			System.out.println("실패");
+		view = request.getRequestDispatcher("/views/user/create_success.jsp");
 		}
+		view.forward(request, response);
+		
+		
+//		if(result > 0) {
+//			System.out.println("성공");
+//		}else {
+//			System.out.println("실패");
+//		}
 	
 	}
 
