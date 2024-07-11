@@ -31,6 +31,9 @@ public class BoardListServlet extends HttpServlet {
 		Board option = new Board();
 		option.setBoard_title(title);
 		
+//		전체 목록 개수 - > 페이징바 구성
+				
+		
 		List<Board> list = new BoardService().selectBoardList(option);
 		
 		
